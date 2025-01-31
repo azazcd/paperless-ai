@@ -63,8 +63,8 @@ class HistoryManager {
                     width: '40px'
                 },
                 { 
-                    data: 'document_id',
-                    width: '60px'
+                    data: 'created_at',
+                    width: '80px'
                 },
                 {
                     data: 'title',
@@ -72,7 +72,7 @@ class HistoryManager {
                         if (type === 'display') {
                             return `
                                 <div class="font-medium">${data}</div>
-                                <div class="text-xs text-gray-500">Modified: ${new Date(row.created_at).toLocaleString()}</div>
+                                <div class="text-xs text-gray-500">ID: ${row.document_id}</div>
                             `;
                         }
                         return data;
