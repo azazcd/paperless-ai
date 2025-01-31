@@ -59,7 +59,7 @@ class HistoryManager {
                 {
                     data: 'document_id',
                     render: (data) => `<input type="checkbox" class="doc-select rounded" value="${data}">`,
-                    orderable: false,
+                    orderable: true,
                     width: '40px'
                 },
                 { 

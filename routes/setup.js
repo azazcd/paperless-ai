@@ -356,6 +356,9 @@ router.get('/api/history', async (req, res) => {
         if (column === 'created_at') {
           return dir * (new Date(a[column]) - new Date(b[column]));
         }
+        if (column === 'document_id') {
+          return dir * (a[column] - b[column]);
+        }
         return dir * a[column].localeCompare(b[column]);
       });
     }
