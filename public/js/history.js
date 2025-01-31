@@ -110,7 +110,7 @@ class HistoryManager {
                 }
             ],
             order: [[2, 'desc']],
-            pageLength: 10,
+            pageLength: 25,
             dom: '<"flex flex-col sm:flex-row justify-between items-center mb-4"<"flex-1"f><"flex-none"l>>rtip',
             language: {
                 search: "Search documents:",
@@ -125,6 +125,10 @@ class HistoryManager {
                 // Reattach event listeners to checkboxes
                 this.attachCheckboxListeners();
             }
+            lengthMenu: [
+                [ 25, 50, 100, 1000, -1],
+                [ 25, 50, 100, 1000, 'All']
+            ]
         });
     }
 
